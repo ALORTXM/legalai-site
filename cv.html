@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <title>LegalAI - קורות חיים</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/apiHandler.js" defer></script>
+  <script>
+    async function handleUserInput() {
+      const input = document.getElementById("userInput").value;
+      if (!input.trim()) return;
+      const mode = "cv";
+      const answer = await askAI(input, mode);
+      alert(answer);
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <h2>LegalAI - קורות חיים</h2>
+    <a href="index.html">חזרה</a>
+  </nav>
+
+  <div class="chat-container">
+    <textarea id="userInput" placeholder="כתוב כאן את קורות החיים..." dir="rtl"></textarea>
+    <button onclick="handleUserInput()">שלח</button>
+  </div>
+</body>
+</html>

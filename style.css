@@ -1,0 +1,131 @@
+/* התאמה מלאה למסך */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* מבטל גלילה ימנית */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #dfe9f3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* סרגל עליון */
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #2c3e50;
+}
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #007aff;
+}
+
+/* כרטיס בדף הבית */
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 60px;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  color: #2c3e50;
+}
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.button-row button {
+  margin: 10px;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.button-row button:hover {
+  background: #0051c7;
+  transform: scale(1.05);
+}
+
+/* צ'אט תביעות/קורות חיים */
+.chat-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#userInput {
+  width: 90%;
+  max-width: 1000px;
+  height: 180px; /* גדול יותר */
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.85);
+}
+.chat-container button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 999px;
+  background-color: #007aff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.chat-container button:hover {
+  background-color: #0051c7;
+direction: rtl;
+text-align: right;
+}#userInput {
+  width: 90%;
+  max-width: 1000px;
+  height: 220px;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  resize: none;
+  background: rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+  direction: rtl;
+  text-align: right;
+}
