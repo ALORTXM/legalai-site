@@ -2,100 +2,135 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LegalAI | העוזר המשפטי שלך</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegalAI - העוזר המשפטי שלך</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px 20px;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 0;
-      background: linear-gradient(to right, #2c3e50, #3498db);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    p {
-      font-size: 1.2em;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0e0e0, #ffffff);
       color: #333;
-      margin-top: 10px;
     }
 
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px 0;
-      gap: 20px;
-    }
-
-    .glass-button {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
-      padding: 15px 40px;
-      border: 1px solid rgba(255, 255, 255, 0.4);
+    .navbar {
+      background: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      color: #000;
-      font-size: 1.1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-      text-decoration: none;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
     }
 
-    .glass-button:hover {
+    .navbar a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      margin-left: 1rem;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #007BFF;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 20px;
       background: rgba(255, 255, 255, 0.4);
-      transform: translateY(-2px);
+      backdrop-filter: blur(12px);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .features {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .features p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     footer {
+      margin-top: 2rem;
       text-align: center;
-      padding: 30px 10px 20px;
-      font-size: 0.9em;
-      color: #666;
-      margin-top: auto;
-      background: transparent;
-    }
-
-    @media (min-width: 600px) {
-      .button-container {
-        flex-direction: row;
-        justify-content: center;
-      }
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>LegalAI</h1>
-    <p>העוזר המשפטי החכם שלך – צור קורות חיים או הגש תביעה בלחיצת כפתור</p>
-  </header>
 
-  <div class="button-container">
-    <a href="cv.html" class="glass-button">צור קורות חיים</a>
-    <a href="claim.html" class="glass-button">התחל תביעה</a>
-  </div>
+  <nav class="navbar">
+    <div><strong>LegalAI</strong></div>
+    <div>
+      <a href="claim.html">התחל תביעה</a>
+      <a href="cv.html">צור קורות חיים</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>LegalAI</h1>
+    <p>העוזר המשפטי החכם שלך – תביעות, קורות חיים, והכול בלחיצת כפתור.</p>
+    <div class="buttons">
+      <button class="btn" onclick="window.location.href='claim.html'">התחל תביעה</button>
+      <button class="btn" onclick="window.location.href='cv.html'">צור קורות חיים</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>מה תוכלו לעשות כאן?</h2>
+    <p>
+      באתר LegalAI תוכלו לנסח תביעות בצורה אוטומטית, ליצור קורות חיים מקצועיים,
+      לחסוך זמן, ולהפוך תהליכים משפטיים לפשוטים מתמיד. בינה מלאכותית בעברית ובאנגלית – בשירותך 24/7.
+    </p>
+  </section>
 
   <footer>
-    <p>© 2025 LegalAI | פיתוח: אלון ורשבסקי | כל הזכויות שמורות.</p>
-    <p>© 2025 LegalAI | Developed by Alon Warshavsky | All rights reserved.</p>
+    <div>פיתוח: אלון ורשבסקי | Developed by Alon Warshavsky</div>
+    <div>© 2025 LegalAI. כל הזכויות שמורות.</div>
   </footer>
+
 </body>
 </html>
-
 
