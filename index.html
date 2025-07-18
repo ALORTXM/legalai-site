@@ -1,117 +1,107 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LegalAI - העוזר המשפטי שלך</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f3f4f6, #e0e7ff);
-      color: #333;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      background-color: #ffffffcc;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    .glass-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 50px auto;
-      flex-wrap: wrap;
-    }
-    .glass-button {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 20px;
-      padding: 20px 40px;
-      font-size: 18px;
-      color: #111;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-    .glass-button:hover {
-      transform: scale(1.05);
-      background-color: #ffffff66;
-    }
-    .section-description {
-      max-width: 600px;
-      margin: 50px auto;
-      font-size: 18px;
-      background-color: #ffffffcc;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #f8fafc;
-      border-top: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      .glass-buttons {
-        flex-direction: column;
-      }
-      .glass-button {
-        width: 80%;
-      }
-    }
-  </style>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6110055333953140"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LegalAI - העוזר המשפטי שלך</title>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6110055333953140"
      crossorigin="anonymous"></script>
-</head>
 
-<body>
-  <header>
-    LegalAI - העוזר המשפטי החכם שלך
-    <nav>
-      <a href="#start-claim">תביעה</a>
-      <a href="#create-cv">קורות חיים</a>
-    </nav>
-  </header>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eaf3f7;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        direction: rtl;
+      }
 
-  <div class="glass-buttons">
-    <a href="claim.html" class="glass-button" id="start-claim">התחל תביעה</a>
-    <a href="cv.html" class="glass-button" id="create-cv">צור קורות חיים</a>
-  </div>
+      header {
+        background-color: #0077cc;
+        color: white;
+        padding: 20px 10px;
+        font-size: 24px;
+        line-height: 1.2;
+      }
 
-  <div class="section-description">
-    LegalAI הוא עוזר משפטי אוטומטי המאפשר לך להגיש תביעה או לבנות קורות חיים בקלות ויעילות, בעברית מלאה ובממשק ידידותי.
-    <br /><br />
-    LegalAI is your smart legal assistant – helping you file claims or build resumes quickly and easily, all in one place.
-  </div>
+      header small {
+        font-size: 14px;
+        display: block;
+        margin-top: 4px;
+      }
 
-  <footer>
-    פיתוח: אלון ורשבסקי<br/>
-    Developed by Alon Warshavsky © 2025
-  </footer>
-</body>
+      .container {
+        margin: 30px auto;
+        max-width: 600px;
+      }
+
+      button {
+        margin: 10px;
+        padding: 15px 25px;
+        font-size: 18px;
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #005fa3;
+      }
+
+      .info-box {
+        display: none;
+        background-color: #ffffff;
+        color: #333;
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+
+      .info-toggle {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        background: none;
+        border: none;
+        color: white;
+        text-decoration: underline;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      LegalAI – העוזר המשפטי החכם <br />
+      <small>לטביעות ובניית קורות חיים</small>
+      <button class="info-toggle" onclick="toggleInfo()">מה זה עושה?</button>
+    </header>
+
+    <div class="info-box" id="infoBox">
+      האתר LegalAI מאפשר לך ליצור מכתבי תביעה מקצועיים או קורות חיים בלחיצת כפתור, בעזרת בינה מלאכותית. המידע שלך מאובטח.
+    </div>
+
+    <div class="container">
+      <button onclick="window.location.href='claim.html'">טביעה</button>
+      <button onclick="window.location.href='cv.html'">קורות חיים</button>
+    </div>
+
+    <script>
+      function toggleInfo() {
+        const box = document.getElementById('infoBox');
+        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+      }
+    </script>
+  </body>
 </html>
+
 
 
