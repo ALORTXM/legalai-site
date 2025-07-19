@@ -1,90 +1,104 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #a3c9ff, #e1f0ff);
-  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #a6c0fe, #f68084);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  min-height: 100vh;
   direction: rtl;
 }
 
 header {
-  width: 100%;
-  padding: 20px;
-  text-align: center;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  font-size: 24px;
   margin: 0;
-  color: #002855;
+  font-size: 1.6rem;
+  color: #ffffff;
 }
 
-button#toggleInfo {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.3);
+.glass-box {
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: none;
+  resize: vertical;
+  font-size: 1rem;
+  direction: rtl;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.main-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
   border: none;
   border-radius: 20px;
+  background: #0078d7;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  color: #003366;
-  transition: 0.3s;
+  transition: background 0.3s ease;
 }
 
-button#toggleInfo:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.glass-container {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.glass-button {
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(15px);
-  color: #002244;
-  font-weight: bold;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
-
-.glass-button:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: scale(1.05);
-}
-
-.glass-info {
-  margin-top: 30px;
-  padding: 20px;
-  max-width: 90%;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  color: #003366;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-.hidden {
-  display: none;
+.main-button:hover {
+  background: #005fa3;
 }
 
 footer {
   margin-top: auto;
-  padding: 20px;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#toggle-info {
+  background: transparent;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#info-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  max-width: 600px;
   text-align: center;
 }
 
+.info-hidden {
+  display: none;
+}
+
+.info-shown {
+  display: block;
+}
