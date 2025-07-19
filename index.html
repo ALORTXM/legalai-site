@@ -2,42 +2,41 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>LegalAI</title>
   <link rel="stylesheet" href="style.css">
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6110055333953140"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>LegalAI</h1>
-    </header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">צור קשר</a></li>
+      <li><a href="#">מידע</a></li>
+      <li><a href="#">הסבר</a></li>
+      <li><a href="#">מחירים</a></li>
+    </ul>
+  </nav>
 
-    <div class="glass-box">
-      <h2>ברוך הבא ל־LegalAI</h2>
-      <p>בחר פעולה:</p>
-      <div class="button-group">
-        <a href="claim.html" class="glass-button">תביעה</a>
-        <a href="cv.html" class="glass-button">קורות חיים</a>
-      </div>
-      <button class="explain-btn" onclick="toggleExplanation()">❔ הסבר</button>
-      <p id="explanation" style="display: none;">
-        כאן תוכלו לכתוב תביעות או קורות חיים בעזרת AI בעברית מלאה וכתיבה מקצועית.
-      </p>
+  <main class="glass-container">
+    <h1 class="main-title">LegalAI</h1>
+    <div class="button-group">
+      <a href="claim.html" class="round-button">תביעה</a>
+      <a href="cv.html" class="round-button">קורות חיים</a>
     </div>
+    <p class="desc-text">העתיד המשפטי כבר כאן – עם בינה מלאכותית מדויקת, מהירה, ומותאמת אישית.</p>
 
-    <footer>
-      <p>© 2025 LegalAI</p>
-    </footer>
-  </div>
-
-  <script>
-    function toggleExplanation() {
-      const exp = document.getElementById('explanation');
-      exp.style.display = exp.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
+    <!-- אזור מודעה -->
+    <div class="adsense-box">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6110055333953140"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </main>
 </body>
 </html>
