@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LegalAI</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6110055333953140"
-     crossorigin="anonymous"></script>", // החלף ל-ID שלך
-      enable_page_level_ads: true
-    });
-  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6110055333953140"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>LegalAI</h1>
-    <button id="toggle-info">מה האתר הזה עושה?</button>
-  </header>
+  <div class="container">
+    <header>
+      <h1>LegalAI</h1>
+    </header>
 
-  <section class="glass-box">
-    <a href="claim.html" class="main-button">תביעה</a>
-    <a href="cv.html" class="main-button">קורות חיים</a>
-  </section>
+    <div class="glass-box">
+      <h2>ברוך הבא ל־LegalAI</h2>
+      <p>בחר פעולה:</p>
+      <div class="button-group">
+        <a href="claim.html" class="glass-button">תביעה</a>
+        <a href="cv.html" class="glass-button">קורות חיים</a>
+      </div>
+      <button class="explain-btn" onclick="toggleExplanation()">❔ הסבר</button>
+      <p id="explanation" style="display: none;">
+        כאן תוכלו לכתוב תביעות או קורות חיים בעזרת AI בעברית מלאה וכתיבה מקצועית.
+      </p>
+    </div>
 
-  <section id="info-box" class="info-hidden">
-    <p>
-      האתר משתמש בבינה מלאכותית כדי לעזור בכתיבת תביעות וקורות חיים בצורה מקצועית, פשוטה ומהירה – ללא צורך בניסיון קודם.
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 LegalAI</p>
-  </footer>
+    <footer>
+      <p>© 2025 LegalAI</p>
+    </footer>
+  </div>
 
   <script>
-    const toggleBtn = document.getElementById("toggle-info");
-    const infoBox = document.getElementById("info-box");
-    toggleBtn.onclick = () => {
-      infoBox.classList.toggle("info-hidden");
-      infoBox.classList.toggle("info-shown");
-    };
+    function toggleExplanation() {
+      const exp = document.getElementById('explanation');
+      exp.style.display = exp.style.display === 'none' ? 'block' : 'none';
+    }
   </script>
 </body>
 </html>
-
-
-
-
