@@ -6,38 +6,42 @@
   <title>LegalAI</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-ID"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-xxxxxxxxxxxxxxxx", // החלף ל-ID שלך
+      enable_page_level_ads: true
+    });
+  </script>
 </head>
 <body>
   <header>
     <h1>LegalAI</h1>
-    <button id="toggleInfo">מה האתר הזה עושה?</button>
+    <button id="toggle-info">מה האתר הזה עושה?</button>
   </header>
 
-  <div class="glass-container">
-    <a href="cv.html" class="glass-button">יצירת קורות חיים</a>
-    <a href="claim.html" class="glass-button">הגשת תביעה</a>
-  </div>
+  <section class="glass-box">
+    <a href="claim.html" class="main-button">תביעה</a>
+    <a href="cv.html" class="main-button">קורות חיים</a>
+  </section>
 
-  <section id="infoSection" class="hidden glass-info">
-    <p>LegalAI הוא אתר המבוסס על בינה מלאכותית המסייע בכתיבת קורות חיים והגשת תביעות משפטיות בצורה מהירה, מדויקת וחכמה.</p>
+  <section id="info-box" class="info-hidden">
+    <p>
+      האתר משתמש בבינה מלאכותית כדי לעזור בכתיבת תביעות וקורות חיים בצורה מקצועית, פשוטה ומהירה – ללא צורך בניסיון קודם.
+    </p>
   </section>
 
   <footer>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="YOUR-ADSENSE-ID"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <p>© 2025 LegalAI</p>
   </footer>
 
   <script>
-    document.getElementById("toggleInfo").addEventListener("click", () => {
-      document.getElementById("infoSection").classList.toggle("hidden");
-    });
+    const toggleBtn = document.getElementById("toggle-info");
+    const infoBox = document.getElementById("info-box");
+    toggleBtn.onclick = () => {
+      infoBox.classList.toggle("info-hidden");
+      infoBox.classList.toggle("info-shown");
+    };
   </script>
 </body>
 </html>
