@@ -1,106 +1,91 @@
-body {
-  overflow-x: hidden;
-}
+/* Reset בסיסי */
+* {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #a6c0fe, #f68084);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body {
   direction: rtl;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #d0e7f9, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* ביטול גלילה אופקית */
 }
 
-header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+.container {
   width: 100%;
+  max-width: 480px;
+  padding: 20px;
+}
+
+header h1 {
   text-align: center;
-  padding: 1rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 1.6rem;
-  color: #ffffff;
-}
-
+/* תיבת זכוכית (Glassmorphism) */
 .glass-box {
-  margin: 2rem auto;
-  padding: 2rem;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   text-align: center;
-  width: 90%;
-  max-width: 600px;
+  color: #003366;
 }
 
-textarea {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 12px;
-  border: none;
-  resize: vertical;
+.glass-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.glass-box p {
+  margin-bottom: 20px;
   font-size: 1rem;
-  direction: rtl;
-  background: rgba(255, 255, 255, 0.8);
 }
 
-.main-button {
-  margin-top: 1rem;
-  padding: 0.8rem 2rem;
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.glass-button {
+  background: rgba(0, 102, 204, 0.3);
   border: none;
-  border-radius: 20px;
-  background: #0078d7;
+  border-radius: 25px;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  transition: 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.glass-button:hover {
+  background: rgba(0, 102, 204, 0.5);
   color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.main-button:hover {
-  background: #005fa3;
+.explain-btn {
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 footer {
-  margin-top: auto;
-  padding: 1rem;
-  color: white;
   text-align: center;
-  font-size: 0.9rem;
-}
-
-#toggle-info {
-  background: transparent;
-  border: 2px solid white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-#info-box {
-  margin-top: 1rem;
-  padding: 1rem;
-  color: white;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  max-width: 600px;
-  text-align: center;
-}
-
-.info-hidden {
-  display: none;
-}
-
-.info-shown {
-  display: block;
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.85rem;
 }
