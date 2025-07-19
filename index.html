@@ -1,107 +1,47 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LegalAI - העוזר המשפטי שלך</title>
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6110055333953140"
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegalAI</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-ID"
      crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>LegalAI</h1>
+    <button id="toggleInfo">מה האתר הזה עושה?</button>
+  </header>
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #eaf3f7;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        direction: rtl;
-      }
+  <div class="glass-container">
+    <a href="cv.html" class="glass-button">יצירת קורות חיים</a>
+    <a href="claim.html" class="glass-button">הגשת תביעה</a>
+  </div>
 
-      header {
-        background-color: #0077cc;
-        color: white;
-        padding: 20px 10px;
-        font-size: 24px;
-        line-height: 1.2;
-      }
+  <section id="infoSection" class="hidden glass-info">
+    <p>LegalAI הוא אתר המבוסס על בינה מלאכותית המסייע בכתיבת קורות חיים והגשת תביעות משפטיות בצורה מהירה, מדויקת וחכמה.</p>
+  </section>
 
-      header small {
-        font-size: 14px;
-        display: block;
-        margin-top: 4px;
-      }
+  <footer>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="YOUR-ADSENSE-ID"
+         data-ad-slot="1234567890"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </footer>
 
-      .container {
-        margin: 30px auto;
-        max-width: 600px;
-      }
-
-      button {
-        margin: 10px;
-        padding: 15px 25px;
-        font-size: 18px;
-        background-color: #0077cc;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #005fa3;
-      }
-
-      .info-box {
-        display: none;
-        background-color: #ffffff;
-        color: #333;
-        border: 1px solid #ccc;
-        padding: 15px;
-        margin: 15px auto;
-        max-width: 400px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      }
-
-      .info-toggle {
-        position: absolute;
-        left: 10px;
-        top: 20px;
-        background: none;
-        border: none;
-        color: white;
-        text-decoration: underline;
-        font-size: 14px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      LegalAI – העוזר המשפטי החכם <br />
-      <small>לטביעות ובניית קורות חיים</small>
-      <button class="info-toggle" onclick="toggleInfo()">מה זה עושה?</button>
-    </header>
-
-    <div class="info-box" id="infoBox">
-      האתר LegalAI מאפשר לך ליצור מכתבי תביעה מקצועיים או קורות חיים בלחיצת כפתור, בעזרת בינה מלאכותית. המידע שלך מאובטח.
-    </div>
-
-    <div class="container">
-      <button onclick="window.location.href='claim.html'">טביעה</button>
-      <button onclick="window.location.href='cv.html'">קורות חיים</button>
-    </div>
-
-    <script>
-      function toggleInfo() {
-        const box = document.getElementById('infoBox');
-        box.style.display = box.style.display === 'block' ? 'none' : 'block';
-      }
-    </script>
-  </body>
+  <script>
+    document.getElementById("toggleInfo").addEventListener("click", () => {
+      document.getElementById("infoSection").classList.toggle("hidden");
+    });
+  </script>
+</body>
 </html>
+
 
 
 
