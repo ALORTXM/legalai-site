@@ -1,91 +1,93 @@
-/* Reset בסיסי */
-* {
+/* Reset גלילה ימינה */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #aee1f9, #d5f3fe);
 }
 
-body {
-  direction: rtl;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #d0e7f9, #ffffff);
+/* סרגל ניווט */
+.navbar {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow-x: hidden; /* ביטול גלילה אופקית */
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-.container {
-  width: 100%;
-  max-width: 480px;
-  padding: 20px;
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-header h1 {
-  text-align: center;
-  color: #003366;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* תיבת זכוכית (Glassmorphism) */
-.glass-box {
+/* תיבת תוכן ראשית */
+.glass-container {
+  margin: 80px auto;
+  padding: 40px;
+  max-width: 800px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  backdrop-filter: blur(14px);
   text-align: center;
-  color: #003366;
+  color: #fff;
 }
 
-.glass-box h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+/* כותרת */
+.main-title {
+  font-size: 48px;
+  margin-bottom: 30px;
 }
 
-.glass-box p {
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
+/* כפתורים עגולים */
 .button-group {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 15px;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
 }
 
-.glass-button {
-  background: rgba(0, 102, 204, 0.3);
-  border: none;
-  border-radius: 25px;
-  padding: 10px 25px;
-  text-decoration: none;
-  color: #003366;
-  font-weight: bold;
-  transition: 0.3s ease;
-  backdrop-filter: blur(5px);
-}
-
-.glass-button:hover {
-  background: rgba(0, 102, 204, 0.5);
-  color: white;
-}
-
-.explain-btn {
-  margin-top: 10px;
-  border: none;
-  background-color: transparent;
-  color: #333;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-footer {
+.round-button {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
   text-align: center;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.round-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* תיאור קצר */
+.desc-text {
+  font-size: 18px;
   margin-top: 20px;
-  color: #666;
-  font-size: 0.85rem;
+}
+
+/* מודעות AdSense */
+.adsense-box {
+  margin-top: 40px;
 }
